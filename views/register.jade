@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  form.form(action="/do_register", method="POST")
+    fieldset
+      legend Formulaire enregistrement
+      .form-group
+        label Utilisateur
+        input.form-control(name="user", type="text")
+      .form-group
+        label Mot de passe
+        input.form-control(name="password", type="password")
+      .form-group
+        label Code yubikey
+        input.form-control(name="yubicode", type="text")
+        span.help-block  Appuyez sur le bouton de votre yubikey
+      button.btn.btn-default(type="submit") Submit

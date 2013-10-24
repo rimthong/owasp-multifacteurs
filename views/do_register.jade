@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  .alert.alert-success
+    h3 Succès
+    p.lead Excellent, vous êtes enregistrés #{user}
+    p.lead Voici votre code google authenticator:
+    img(src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=otpauth://totp/#{user}@owaspmultifacteurs?secret=#{code}")

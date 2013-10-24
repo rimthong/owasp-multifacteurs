@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .jumbotron
+    .container
+      h1= title
+      p.lead Bienvenue #{title}
+      p
+        a.btn.btn-primary.btn-large(href="/register") S'enregistrer
+        |  Ou connectez vous ci-dessous!
+  form.form(action="/verify", method="POST")
+    fieldset
+      legend Log In
+      .form-group
+        label Utilisateur
+        input.form-control(name="user", type="text")
+      .form-group
+        label Mot de passe
+        input.form-control(name="password", type="password")
+      .form-group
+        label Clé 
+        input.form-control(name="key", type="text")
+        span.help-block Entrez votre code Google Authenticator ou appuyez sur clé Yubikey.
+      button.btn.btn-default(type="submit") Submit

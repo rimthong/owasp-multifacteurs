@@ -1,0 +1,17 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='javascript', href='/javascripts/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-theme.min.css')
+  body
+    nav.navbar.navbar-default(role='navigation')
+      .navbar-header
+        a.navbar-brand(href='/') Demo OWASP Multifacteurs
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li
+            a(href='/register') S'enregistrer
+    block content
